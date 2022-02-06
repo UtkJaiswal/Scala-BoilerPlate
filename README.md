@@ -1,51 +1,53 @@
-# play-java-starter-example
+## Setup in the system
 
-This is a starter application that shows how Play works.  Please see the documentation at https://www.playframework.com/documentation/latest/Home for more details.
+- Install Java in the system with the following version:
 
-## Running
 
-Run this using [sbt](http://www.scala-sbt.org/).  If you downloaded this project from http://www.playframework.com/download then you'll find a prepackaged version of sbt in the project directory:
+    ![java-version screenshot](https://imgur.com/kBJi35q.png)
+    
 
-```
-sbt run
-```
+- Install sbt and make sure to have the following version:
+    
+    ![sbt-version screenshot](https://imgur.com/fnLhoDI.png)
+    
+    
 
-And then go to http://localhost:9000 to see the running web application.
 
-## Controllers
+## Steps to run the GurukulBytesBackend project
+- Jump into the project directory from the terminal
+- Run  `sbt run` command 
 
-There are several demonstration files available in this template.
 
-- `HomeController.java`:
 
-  Shows how to handle simple HTTP requests.
 
-- `AsyncController.java`:
+## Java Version error 
+Getting error of this sort?
 
-  Shows how to do asynchronous programming when handling a request.
+![java-version-error screenshot](https://imgur.com/ZTQEaJC.png)
 
-- `CountController.java`:
+Follow the belows steps:
 
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+- Make sure correct Java version and Sbt version are being used for the project
 
-## Components
+- If issues persists jump into Control panel and search for Environment variables 
 
-- `Module.java`:
+- Add variables in System variables as follows:
 
-  Shows how to use Guice to bind all the components needed by your application.
+    - `JAVA_HOME:C:\Program Files\Java\jdk1.8.0_202\bin`
 
-- `Counter.java`:
+    - `JAVA:C:\Program Files\Java\jdk1.8.0_202\bin` 
 
-  An example of a component that contains state, in this case a simple counter.
+- In the Path we need to add 
 
-- `ApplicationTimer.java`:
+    - `C:\Program Files\Java\jdk1.8.0_202\bin`
 
-  An example of a component that starts when the application starts and stops
-  when the application stops.
 
-## Filters
 
-- `ExampleFilter.java`:
 
-  A simple filter that adds a header to every response.
+## Frontend Directory details
+
+- The landing page file is in : `GURUKULBYTESBACKEND/generated/app/views/index.scala.html`
+
+- The login page file is in: `GURUKULBYTESBACKEND/generated/app/views/userlogin.scala.html`
+
+- Router file for the frontend API is in : `GURUKULBYTESBACKEND/generated/app/views/Router.scala`

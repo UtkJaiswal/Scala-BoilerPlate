@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\views\main.scala.html:16:52: not found: value popperjs[0m
+[0m[[0m[31merror[0m] [0m[0m        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

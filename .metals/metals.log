@@ -1,0 +1,121 @@
+2022.02.07 03:05:27 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\lsp.trace.json or C:\Users\DELL\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.07 03:05:27 INFO  logging to file C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\metals.log
+2022.02.07 03:05:27 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example' for client Visual Studio Code 1.64.0.
+2022.02.07 03:05:27 INFO  Parse release: 1.8.0_292
+2022.02.07 03:05:32 INFO  time: initialize in 4.51s
+2022.02.07 03:05:34 WARN  Build server is not auto-connectable.
+2022.02.07 03:05:35 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:05:50 INFO  no build target found for C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.07 03:05:59 INFO  time: code lens generation in 24s
+2022.02.07 03:05:59 INFO  time: code lens generation in 6.58s
+Feb 07, 2022 3:11:48 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 609
+2022.02.07 03:12:22 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:16:56 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:17:20 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:22:33 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:24:01 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:33:17 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:34:15 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:34:21 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:38:06 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:38:26 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:38:47 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:41:11 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:41:17 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:43:54 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:44:46 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:45:14 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:47:09 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:49:26 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.07 03:50:18 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.07 03:54:01 INFO  shutting down Metals
+2022.02.07 03:54:02 ERROR Unexpected error initializing server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022.02.08 10:23:19 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\lsp.trace.json or C:\Users\DELL\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.08 10:23:20 INFO  logging to file C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\metals.log
+2022.02.08 10:23:20 INFO  Started: Metals version 0.11.1 in workspace 'C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example' for client Visual Studio Code 1.64.0.
+2022.02.08 10:23:20 INFO  Parse release: 1.8.0_292
+2022.02.08 10:23:22 INFO  time: initialize in 1.73s
+2022.02.08 10:23:24 WARN  Build server is not auto-connectable.
+2022.02.08 10:23:24 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:23:24 INFO  skipping build import with status 'Requested'
+2022.02.08 10:23:51 INFO  no build target found for C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.08 10:24:02 INFO  time: code lens generation in 37s
+2022.02.08 10:48:28 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.08 10:48:59 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:50:11 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:50:13 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:50:47 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:51:00 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:52:30 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:52:49 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:52:56 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 10:54:05 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\build.sbt
+2022.02.08 10:54:29 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\build.sbt
+2022.02.08 10:54:39 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\build.sbt
+2022.02.08 10:54:39 INFO  skipping build import with status 'Dismissed'
+2022.02.08 10:54:41 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\build.sbt
+2022.02.08 10:54:41 INFO  skipping build import with status 'Dismissed'
+2022.02.08 11:13:17 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+Feb 08, 2022 11:15:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 202
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 204
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 203
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 206
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 207
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 209
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 213
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 212
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 215
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 214
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 218
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 216
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 221
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 223
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 225
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 229
+Feb 08, 2022 11:15:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 227
+2022.02.08 11:15:27 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:15:46 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:16:03 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:16:48 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\AsyncController.scala
+2022.02.08 11:20:41 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\CountController.scala
+2022.02.08 11:21:40 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:22:32 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:23:32 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:26:26 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:30:59 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:31:17 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.08 11:33:11 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 11:33:15 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\TaskList.scala
+2022.02.08 12:12:26 INFO  shutting down Metals
+2022.02.19 00:10:11 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\lsp.trace.json or C:\Users\DELL\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.19 00:10:13 INFO  logging to file C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\metals.log

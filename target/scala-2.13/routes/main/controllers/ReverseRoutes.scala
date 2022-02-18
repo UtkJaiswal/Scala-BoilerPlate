@@ -31,16 +31,28 @@ package controllers {
     }
 
   
-    // @LINE:22
-    def about: Call = {
+    // @LINE:25
+    def tasklist: Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "about")
+      Call("GET", _prefix + { _defaultPrefix } + "tasklist")
+    }
+  
+    // @LINE:29
+    def userlogin: Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "userlogin")
     }
   
     // @LINE:19
     def signup: Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "signup")
+    }
+  
+    // @LINE:22
+    def about: Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "about")
     }
   
     // @LINE:6

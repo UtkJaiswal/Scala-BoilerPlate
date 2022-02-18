@@ -20,3 +20,10 @@ GET     /signup                      controllers.HomeController.signup
 
 # About-page
 GET     /about                      controllers.HomeController.about
+
+# tasklist-page
+GET     /tasklist                      controllers.HomeController.tasklist
+
+# userlogin
++nocsrf
+POST     /userlogin                      controllers.HomeController.userlogin

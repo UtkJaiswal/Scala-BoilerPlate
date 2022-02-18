@@ -1,0 +1,10 @@
+@(tasks:Seq[String])(implicit assetsFinder: AssetsFinder)
+@main("Tasklist"){
+    <div class="container">
+        <ul>
+            @for(task<-tasks) {
+                <li>@task</li>
+            }
+        </ul>
+    </div>
+}

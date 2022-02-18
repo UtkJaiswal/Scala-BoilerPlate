@@ -3,6 +3,8 @@ package controllers
 import javax.inject._
 
 import play.api.mvc._
+import java.lang.ProcessBuilder.Redirect
+import models.TaskListInMemoryModel
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -22,7 +24,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
     Ok(views.html.index("Welcome"))
   }
 
-  // login page
+  //  login page
   def login = Action {
     Ok(views.html.login())
   }
@@ -37,4 +39,24 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
     Ok(views.html.about())
   }
 
+   // tasklist
+  def tasklist = Action {
+    val tasks = List("Task1","Task2","Task3")
+    Ok(views.html.tasklist(tasks))
+  }
+
+  // userlogin
+  def userlogin = Action { request=>
+    val postVals = request.body.asFormUrlEncoded
+    postVals.map{args=>
+      val username = args("email").head
+      val password = args("password").head
+      if(TaskListInMemoryModel.validateUser(username,password)){
+        Redirect(routes.HomeController.tasklist)
+      } else {
+        Redirect(routes.HomeController.login)
+      }
+    }.getOrElse(Redirect(routes.HomeController.login))
+    
+  }
 }

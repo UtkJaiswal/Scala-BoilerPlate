@@ -53,6 +53,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signup"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """about""", """controllers.HomeController.about"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tasklist""", """controllers.HomeController.tasklist"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userlogin""", """controllers.HomeController.userlogin"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -186,6 +188,42 @@ class Routes(
     )
   )
 
+  // @LINE:25
+  private[this] lazy val controllers_HomeController_tasklist7_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tasklist")))
+  )
+  private[this] lazy val controllers_HomeController_tasklist7_invoker = createInvoker(
+    HomeController_3.tasklist,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "tasklist",
+      Nil,
+      "GET",
+      this.prefix + """tasklist""",
+      """ tasklist-page""",
+      Seq()
+    )
+  )
+
+  // @LINE:29
+  private[this] lazy val controllers_HomeController_userlogin8_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("userlogin")))
+  )
+  private[this] lazy val controllers_HomeController_userlogin8_invoker = createInvoker(
+    HomeController_3.userlogin,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "userlogin",
+      Nil,
+      "POST",
+      this.prefix + """userlogin""",
+      """ userlogin""",
+      Seq("""nocsrf""")
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -229,6 +267,18 @@ class Routes(
     case controllers_HomeController_about6_route(params@_) =>
       call { 
         controllers_HomeController_about6_invoker.call(HomeController_3.about)
+      }
+  
+    // @LINE:25
+    case controllers_HomeController_tasklist7_route(params@_) =>
+      call { 
+        controllers_HomeController_tasklist7_invoker.call(HomeController_3.tasklist)
+      }
+  
+    // @LINE:29
+    case controllers_HomeController_userlogin8_route(params@_) =>
+      call { 
+        controllers_HomeController_userlogin8_invoker.call(HomeController_3.userlogin)
       }
   }
 }

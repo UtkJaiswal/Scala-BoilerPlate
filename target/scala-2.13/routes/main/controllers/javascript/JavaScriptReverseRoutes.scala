@@ -37,12 +37,22 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
-    def about: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.about",
+    // @LINE:25
+    def tasklist: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.tasklist",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tasklist"})
+        }
+      """
+    )
+  
+    // @LINE:29
+    def userlogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.userlogin",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "userlogin"})
         }
       """
     )
@@ -53,6 +63,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def about: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.about",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
         }
       """
     )

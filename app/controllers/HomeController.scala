@@ -41,7 +41,8 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
 
    // tasklist
   def tasklist = Action {
-    val tasks = List("Task1","Task2","Task3")
+    val username="Mark@gmail.com"
+    val tasks = TaskListInMemoryModel.getTasks(username)
     Ok(views.html.tasklist(tasks))
   }
 

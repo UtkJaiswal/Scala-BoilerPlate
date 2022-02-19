@@ -6805,3 +6805,10 @@ Caused by: java.lang.IllegalArgumentException: 15 is not a valid line number, al
 2022.02.19 00:45:10 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\filters\ExampleFilter.scala
 2022.02.19 00:49:15 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
 2022.02.19 00:49:50 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 00:52:07 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
+2022.02.19 00:56:54 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
+2022.02.19 00:58:04 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
+2022.02.19 00:59:30 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 01:04:43 INFO  shutting down Metals
+2022.02.19 10:44:52 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\lsp.trace.json or C:\Users\DELL\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.19 10:45:01 INFO  logging to file C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\.metals\metals.log

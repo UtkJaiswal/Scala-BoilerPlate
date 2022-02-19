@@ -14,8 +14,16 @@ object TaskListInMemoryModel {
     def validateUser(username:String,password:String):Boolean ={
         users.get(username).map(_==password).getOrElse(false)
     }
-    def createUser(username:String,password:String):Boolean = ???
 
+    //function to create a new user
+    def createUser(username:String,password:String):Boolean = {
+        if(users.contains(username)) false else {
+            users(username) = password
+            true
+        }
+    }
+
+    //function to get tasks of the user
     def getTasks(username:String) : Seq[String] = {
         tasks.get(username).getOrElse(Nil)
     }

@@ -31,6 +31,12 @@ package controllers {
     }
 
   
+    // @LINE:32
+    def createUser: Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "createUser")
+    }
+  
     // @LINE:25
     def tasklist: Call = {
       

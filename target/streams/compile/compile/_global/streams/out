@@ -1,10 +1,6 @@
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:55:48: play.api.mvc.Call does not take parameters
-[error]         Redirect(routes.HomeController.tasklist())
-[error]                                                ^
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:57:45: play.api.mvc.Call does not take parameters
-[error]         Redirect(routes.HomeController.login())
-[error]                                             ^
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:59:53: play.api.mvc.Call does not take parameters
-[error]     }.getOrElse(Redirect(routes.HomeController.login()))
-[error]                                                     ^
-[error] three errors found
+[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:61:16: type mismatch;
+[error]  found   : Any
+[error]  required: play.api.mvc.Result
+[error]     }.getOrElse(Redirect(routes.HomeController.login))
+[error]                ^
+[error] one error found

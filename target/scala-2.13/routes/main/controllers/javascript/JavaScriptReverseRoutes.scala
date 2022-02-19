@@ -37,6 +37,16 @@ package controllers.javascript {
     }
 
   
+    // @LINE:32
+    def createUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.createUser",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "createUser"})
+        }
+      """
+    )
+  
     // @LINE:25
     def tasklist: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.tasklist",

@@ -46,6 +46,21 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
     Ok(views.html.tasklist(tasks))
   }
 
+  //create user
+  def createUser = Action { request=>
+    val postVals = request.body.asFormUrlEncoded
+    postVals.map{args=>
+      val username = args("email").head
+      val password = args("password").head
+      if(TaskListInMemoryModel.createUser(username,password)){
+        Redirect(routes.HomeController.tasklist)
+      } else {
+        Redirect(routes.HomeController.login)
+      }
+    }.getOrElse(Redirect(routes.HomeController.login))
+    
+  }
+
   // userlogin
   def userlogin = Action { request=>
     val postVals = request.body.asFormUrlEncoded

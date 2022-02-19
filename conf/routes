@@ -27,3 +27,6 @@ GET     /tasklist                      controllers.HomeController.tasklist
 # userlogin
 +nocsrf
 POST     /userlogin                      controllers.HomeController.userlogin
+
++nocsrf
+POST     /createUser                       controllers.HomeController.createUser

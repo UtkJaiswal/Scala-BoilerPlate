@@ -1,6 +1,4 @@
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:61:16: type mismatch;
-[error]  found   : Any
-[error]  required: play.api.mvc.Result
-[error]     }.getOrElse(Redirect(routes.HomeController.login))
-[error]                ^
+[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:34:25: Cannot find any HTTP Request Header here
+[error]     Ok(views.html.signup())
+[error]                         ^
 [error] one error found

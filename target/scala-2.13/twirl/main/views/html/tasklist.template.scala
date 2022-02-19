@@ -26,11 +26,13 @@ object tasklist extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.H
 Seq[Any](format.raw/*1.58*/("""
 """),_display_(/*2.2*/main("Tasklist")/*2.18*/{_display_(Seq[Any](format.raw/*2.19*/("""
     """),format.raw/*3.5*/("""<div class="container">
+        <h2>TaskList</h2>
         <ul>
-            """),_display_(/*5.14*/for(task<-tasks) yield /*5.30*/ {_display_(Seq[Any](format.raw/*5.32*/("""
-                """),format.raw/*6.17*/("""<li>"""),_display_(/*6.22*/task),format.raw/*6.26*/("""</li>
-            """)))}),format.raw/*7.14*/("""
-        """),format.raw/*8.9*/("""</ul>
+            """),_display_(/*6.14*/for(task<-tasks) yield /*6.30*/ {_display_(Seq[Any](format.raw/*6.32*/("""
+                """),format.raw/*7.17*/("""<li>"""),_display_(/*7.22*/task),format.raw/*7.26*/("""</li>
+            """)))}),format.raw/*8.14*/("""
+        """),format.raw/*9.9*/("""</ul>
+        <div><a href=""""),_display_(/*10.24*/routes/*10.30*/.HomeController.logout),format.raw/*10.52*/("""">Logout</a></div>
     </div>
 """)))}))
       }
@@ -49,9 +51,9 @@ Seq[Any](format.raw/*1.58*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/tasklist.scala.html
-                  HASH: 2297af8cde93103b62a001aa98f82e12c5fc88de
-                  MATRIX: 750->1|901->57|929->60|953->76|991->77|1023->83|1101->135|1132->151|1171->153|1216->171|1247->176|1271->180|1321->200|1357->210
-                  LINES: 21->1|26->1|27->2|27->2|27->2|28->3|30->5|30->5|30->5|31->6|31->6|31->6|32->7|33->8
+                  HASH: 1997774b66f942ef40a979cc7bb848061f7d74c3
+                  MATRIX: 750->1|901->57|929->60|953->76|991->77|1023->83|1128->162|1159->178|1198->180|1243->198|1274->203|1298->207|1348->227|1384->237|1441->267|1456->273|1499->295
+                  LINES: 21->1|26->1|27->2|27->2|27->2|28->3|31->6|31->6|31->6|32->7|32->7|32->7|33->8|34->9|35->10|35->10|35->10
                   -- GENERATED --
               */
           

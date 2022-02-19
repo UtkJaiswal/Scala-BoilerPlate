@@ -31,7 +31,7 @@ package controllers {
     }
 
   
-    // @LINE:32
+    // @LINE:33
     def createUser: Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "createUser")
@@ -59,6 +59,12 @@ package controllers {
     def about: Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "about")
+    }
+  
+    // @LINE:36
+    def logout: Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
     // @LINE:6

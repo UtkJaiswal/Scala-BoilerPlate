@@ -1,8 +1,9 @@
-@()(implicit assetsFinder: AssetsFinder)
+@()(implicit assetsFinder: AssetsFinder,request:RequestHeader)
 @main("Login"){
 <div class="container">
     <h1>Welcome to login page</h1>
     <form method="post" action="@routes.HomeController.userlogin">
+        @helper.CSRF.formField
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">

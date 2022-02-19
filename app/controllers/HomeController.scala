@@ -25,12 +25,12 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
   }
 
   //  login page
-  def login = Action {
+  def login = Action {implicit request =>
     Ok(views.html.login())
   }
 
   // signup page
-  def signup = Action {
+  def signup = Action {implicit request =>
     Ok(views.html.signup())
   }
 
@@ -40,10 +40,13 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
   }
 
    // tasklist
-  def tasklist = Action {
-    val username="Mark@gmail.com"
-    val tasks = TaskListInMemoryModel.getTasks(username)
-    Ok(views.html.tasklist(tasks))
+  def tasklist = Action { request =>
+    val usernameOption = request.session.get("username")
+    usernameOption.map { username =>
+      val tasks = TaskListInMemoryModel.getTasks(username)
+      Ok(views.html.tasklist(tasks))
+    }.getOrElse(Redirect(routes.HomeController.login))
+    
   }
 
   //create user
@@ -53,7 +56,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
       val username = args("email").head
       val password = args("password").head
       if(TaskListInMemoryModel.createUser(username,password)){
-        Redirect(routes.HomeController.tasklist)
+        Redirect(routes.HomeController.tasklist).withSession("username"->username)
       } else {
         Redirect(routes.HomeController.login)
       }
@@ -68,11 +71,14 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
       val username = args("email").head
       val password = args("password").head
       if(TaskListInMemoryModel.validateUser(username,password)){
-        Redirect(routes.HomeController.tasklist)
+        Redirect(routes.HomeController.tasklist).withSession("username"->username)
       } else {
         Redirect(routes.HomeController.login)
       }
     }.getOrElse(Redirect(routes.HomeController.login))
-    
+  }
+
+  def logout = Action {
+    Redirect(routes.HomeController.login).withNewSession
   }
 }

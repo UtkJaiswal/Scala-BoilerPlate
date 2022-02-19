@@ -56,6 +56,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tasklist""", """controllers.HomeController.tasklist"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userlogin""", """controllers.HomeController.userlogin"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """createUser""", """controllers.HomeController.createUser"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.HomeController.logout"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -220,12 +221,12 @@ class Routes(
       Nil,
       "POST",
       this.prefix + """userlogin""",
-      """ userlogin""",
-      Seq("""nocsrf""")
+      """""",
+      Seq()
     )
   )
 
-  // @LINE:32
+  // @LINE:33
   private[this] lazy val controllers_HomeController_createUser9_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("createUser")))
   )
@@ -239,7 +240,25 @@ class Routes(
       "POST",
       this.prefix + """createUser""",
       """""",
-      Seq("""nocsrf""")
+      Seq()
+    )
+  )
+
+  // @LINE:36
+  private[this] lazy val controllers_HomeController_logout10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
+  )
+  private[this] lazy val controllers_HomeController_logout10_invoker = createInvoker(
+    HomeController_3.logout,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "logout",
+      Nil,
+      "GET",
+      this.prefix + """logout""",
+      """ logout""",
+      Seq()
     )
   )
 
@@ -300,10 +319,16 @@ class Routes(
         controllers_HomeController_userlogin8_invoker.call(HomeController_3.userlogin)
       }
   
-    // @LINE:32
+    // @LINE:33
     case controllers_HomeController_createUser9_route(params@_) =>
       call { 
         controllers_HomeController_createUser9_invoker.call(HomeController_3.createUser)
+      }
+  
+    // @LINE:36
+    case controllers_HomeController_logout10_route(params@_) =>
+      call { 
+        controllers_HomeController_logout10_invoker.call(HomeController_3.logout)
       }
   }
 }

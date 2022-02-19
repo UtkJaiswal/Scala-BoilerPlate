@@ -37,7 +37,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:33
     def createUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.createUser",
       """
@@ -83,6 +83,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
+        }
+      """
+    )
+  
+    // @LINE:36
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.logout",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
         }
       """
     )

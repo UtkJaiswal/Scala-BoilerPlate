@@ -25,8 +25,12 @@ GET     /about                      controllers.HomeController.about
 GET     /tasklist                      controllers.HomeController.tasklist
 
 # userlogin
-+nocsrf
+
 POST     /userlogin                      controllers.HomeController.userlogin
 
-+nocsrf
+# createUser
+
 POST     /createUser                       controllers.HomeController.createUser
+
+# logout
+GET     /logout                              controllers.HomeController.logout

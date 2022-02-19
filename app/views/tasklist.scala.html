@@ -1,10 +1,12 @@
 @(tasks:Seq[String])(implicit assetsFinder: AssetsFinder)
 @main("Tasklist"){
     <div class="container">
+        <h2>TaskList</h2>
         <ul>
             @for(task<-tasks) {
                 <li>@task</li>
             }
         </ul>
+        <div><a href="@routes.HomeController.logout">Logout</a></div>
     </div>
 }

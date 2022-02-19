@@ -57,6 +57,7 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userlogin""", """controllers.HomeController.userlogin"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """createUser""", """controllers.HomeController.createUser"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.HomeController.logout"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addTask""", """controllers.HomeController.addTask"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -262,6 +263,24 @@ class Routes(
     )
   )
 
+  // @LINE:39
+  private[this] lazy val controllers_HomeController_addTask11_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addTask")))
+  )
+  private[this] lazy val controllers_HomeController_addTask11_invoker = createInvoker(
+    HomeController_3.addTask,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "addTask",
+      Nil,
+      "POST",
+      this.prefix + """addTask""",
+      """ add task""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -329,6 +348,12 @@ class Routes(
     case controllers_HomeController_logout10_route(params@_) =>
       call { 
         controllers_HomeController_logout10_invoker.call(HomeController_3.logout)
+      }
+  
+    // @LINE:39
+    case controllers_HomeController_addTask11_route(params@_) =>
+      call { 
+        controllers_HomeController_addTask11_invoker.call(HomeController_3.addTask)
       }
   }
 }

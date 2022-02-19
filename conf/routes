@@ -34,3 +34,6 @@ POST     /createUser                       controllers.HomeController.createUser
 
 # logout
 GET     /logout                              controllers.HomeController.logout
+
+# add task
+POST     /addTask                              controllers.HomeController.addTask

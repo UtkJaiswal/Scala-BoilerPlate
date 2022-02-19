@@ -67,6 +67,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:39
+    def addTask: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addTask",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addTask"})
+        }
+      """
+    )
+  
     // @LINE:19
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.signup",

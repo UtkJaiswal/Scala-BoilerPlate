@@ -49,6 +49,12 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "userlogin")
     }
   
+    // @LINE:39
+    def addTask: Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "addTask")
+    }
+  
     // @LINE:19
     def signup: Call = {
       

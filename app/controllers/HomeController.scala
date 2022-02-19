@@ -20,7 +20,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index = Action {
+  def index = Action { implicit request =>
     Ok(views.html.index("Welcome"))
   }
 
@@ -35,12 +35,12 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
   }
 
   // about page
-  def about = Action {
+  def about = Action {implicit request =>
     Ok(views.html.about())
   }
 
    // tasklist
-  def tasklist = Action { request =>
+  def tasklist = Action {implicit request =>
     val usernameOption = request.session.get("username")
     usernameOption.map { username =>
       val tasks = TaskListInMemoryModel.getTasks(username)
@@ -50,7 +50,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
   }
 
   //create user
-  def createUser = Action { request=>
+  def createUser = Action { implicit request =>
     val postVals = request.body.asFormUrlEncoded
     postVals.map{args=>
       val username = args("email").head
@@ -58,14 +58,14 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
       if(TaskListInMemoryModel.createUser(username,password)){
         Redirect(routes.HomeController.tasklist).withSession("username"->username)
       } else {
-        Redirect(routes.HomeController.login)
+        Redirect(routes.HomeController.login).flashing("error"->"User signup failed")
       }
     }.getOrElse(Redirect(routes.HomeController.login))
     
   }
 
   // userlogin
-  def userlogin = Action { request=>
+  def userlogin = Action { implicit request =>
     val postVals = request.body.asFormUrlEncoded
     postVals.map{args=>
       val username = args("email").head
@@ -73,12 +73,28 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
       if(TaskListInMemoryModel.validateUser(username,password)){
         Redirect(routes.HomeController.tasklist).withSession("username"->username)
       } else {
-        Redirect(routes.HomeController.login)
+        Redirect(routes.HomeController.login).flashing("error"->"Invalid username/password credentials")
       }
     }.getOrElse(Redirect(routes.HomeController.login))
   }
 
-  def logout = Action {
+  //logout button action
+  def logout = Action { implicit request =>
     Redirect(routes.HomeController.login).withNewSession
   }
+
+  //add task 
+  def addTask = Action {implicit request =>
+    val usernameOption = request.session.get("username")  
+    usernameOption.map{ username =>
+      
+      val postVals = request.body.asFormUrlEncoded
+      postVals.map{args=>
+        val task = args("newTask").head
+        TaskListInMemoryModel.addTask(username,task)
+        Redirect(routes.HomeController.tasklist)
+      }.getOrElse(Redirect(routes.HomeController.tasklist))
+    }.getOrElse(Redirect(routes.HomeController.login))
+  }
+
 }

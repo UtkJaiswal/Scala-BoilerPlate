@@ -28,7 +28,10 @@ object TaskListInMemoryModel {
         tasks.get(username).getOrElse(Nil)
     }
 
-    def addTask(username:String, task:String):Unit = ???
+    def addTask(username:String, task:String):Unit = {
+        // below statement add task to tasks in the front
+        tasks(username) = task :: tasks.get(username).getOrElse(Nil)
+    }
 
     def removeTask(username:String,index:Int):Boolean = ???
 }

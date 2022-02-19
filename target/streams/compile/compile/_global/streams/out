@@ -1,4 +1,4 @@
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:34:25: Cannot find any HTTP Request Header here
-[error]     Ok(views.html.signup())
-[error]                         ^
+[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:24:24: could not find implicit value for parameter flash: play.api.mvc.Flash
+[error]     Ok(views.html.index("Welcome"))
+[error]                        ^
 [error] one error found

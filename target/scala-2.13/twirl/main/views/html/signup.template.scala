@@ -15,15 +15,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[AssetsFinder,RequestHeader,play.twirl.api.HtmlFormat.Appendable] {
+object signup extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[AssetsFinder,RequestHeader,Flash,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/()(implicit assetsFinder: AssetsFinder,request:RequestHeader):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/()(implicit assetsFinder: AssetsFinder,request:RequestHeader,flash:Flash):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.63*/("""
+Seq[Any](format.raw/*1.75*/("""
 """),_display_(/*2.2*/main("Signup")/*2.16*/{_display_(Seq[Any](format.raw/*2.17*/("""
 """),format.raw/*3.1*/("""<div class="container">
     <h1>Welcome to Signup page</h1>
@@ -52,9 +52,9 @@ Seq[Any](format.raw/*1.63*/("""
     }
   }
 
-  def render(assetsFinder:AssetsFinder,request:RequestHeader): play.twirl.api.HtmlFormat.Appendable = apply()(assetsFinder,request)
+  def render(assetsFinder:AssetsFinder,request:RequestHeader,flash:Flash): play.twirl.api.HtmlFormat.Appendable = apply()(assetsFinder,request,flash)
 
-  def f:(() => (AssetsFinder,RequestHeader) => play.twirl.api.HtmlFormat.Appendable) = () => (assetsFinder,request) => apply()(assetsFinder,request)
+  def f:(() => (AssetsFinder,RequestHeader,Flash) => play.twirl.api.HtmlFormat.Appendable) = () => (assetsFinder,request,flash) => apply()(assetsFinder,request,flash)
 
   def ref: this.type = this
 
@@ -64,8 +64,8 @@ Seq[Any](format.raw/*1.63*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/signup.scala.html
-                  HASH: 38c0ce392ed1a767e967deaa7b50893693fc345c
-                  MATRIX: 750->1|906->62|934->65|956->79|994->80|1022->82|1143->177|1157->183|1203->209|1242->222|1256->228|1291->243|1327->253
+                  HASH: 070124de4b22eb5d1f740f9e1ac0136e3c105d74
+                  MATRIX: 756->1|924->74|952->77|974->91|1012->92|1040->94|1161->189|1175->195|1221->221|1260->234|1274->240|1309->255|1345->265
                   LINES: 21->1|26->1|27->2|27->2|27->2|28->3|30->5|30->5|30->5|31->6|31->6|31->6|32->7
                   -- GENERATED --
               */

@@ -1,4 +1,4 @@
-@(tasks:Seq[String])(implicit assetsFinder: AssetsFinder)
+@(tasks:Seq[String])(implicit assetsFinder: AssetsFinder,request:RequestHeader,flash:Flash)
 @main("Tasklist"){
     <div class="container">
         <h2>TaskList</h2>
@@ -7,6 +7,11 @@
                 <li>@task</li>
             }
         </ul>
+        <form method="post" action="@routes.HomeController.addTask">
+            @helper.CSRF.formField
+            <input  type="text" name="newTask">
+            <input  type="submit">
+        </form>
         <div><a href="@routes.HomeController.logout">Logout</a></div>
     </div>
 }

@@ -6837,3 +6837,15 @@ Caused by: java.lang.IllegalArgumentException: 15 is not a valid line number, al
 2022.02.19 11:29:04 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
 2022.02.19 11:29:04 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
 2022.02.19 11:30:16 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\models\TaskListInMemoryModel.scala
+Feb 19, 2022 11:47:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 747
+2022.02.19 11:51:25 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 11:52:13 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 11:52:52 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 11:56:55 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 11:57:47 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 13:22:16 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+Feb 19, 2022 1:22:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1365
+2022.02.19 13:22:52 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala
+2022.02.19 13:23:04 WARN  no build target for: C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala

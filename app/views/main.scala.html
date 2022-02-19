@@ -5,7 +5,7 @@
  * object to insert into the body of the page and an `AssetFinder`
  * to define to reverse route static assets.
  *@
-@(title: String)(content: Html)(implicit assetsFinder: AssetsFinder)
+@(title: String)(content: Html)(implicit assetsFinder: AssetsFinder,flash:Flash)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +48,8 @@
           </nav>
         @* And here's where we render the `Html` object containing
          * the page content. *@
+        <h3>@flash.get("error")</h3>
+        <h3>@flash.get("success")</h3>
         @content
     </body>
 </html>

@@ -15,15 +15,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object about extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[AssetsFinder,play.twirl.api.HtmlFormat.Appendable] {
+object about extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[AssetsFinder,Flash,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/()(implicit assetsFinder: AssetsFinder):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/()(implicit assetsFinder: AssetsFinder,flash:Flash):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.41*/("""
+Seq[Any](format.raw/*1.53*/("""
 """),_display_(/*2.2*/main("About")/*2.15*/{_display_(Seq[Any](format.raw/*2.16*/("""
 """),format.raw/*3.1*/("""<div class="container">
     <h1>This is the About page</h1>
@@ -33,9 +33,9 @@ Seq[Any](format.raw/*1.41*/("""
     }
   }
 
-  def render(assetsFinder:AssetsFinder): play.twirl.api.HtmlFormat.Appendable = apply()(assetsFinder)
+  def render(assetsFinder:AssetsFinder,flash:Flash): play.twirl.api.HtmlFormat.Appendable = apply()(assetsFinder,flash)
 
-  def f:(() => (AssetsFinder) => play.twirl.api.HtmlFormat.Appendable) = () => (assetsFinder) => apply()(assetsFinder)
+  def f:(() => (AssetsFinder,Flash) => play.twirl.api.HtmlFormat.Appendable) = () => (assetsFinder,flash) => apply()(assetsFinder,flash)
 
   def ref: this.type = this
 
@@ -45,8 +45,8 @@ Seq[Any](format.raw/*1.41*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/about.scala.html
-                  HASH: bf16f6ce420485886bb88e08896326483005a7f8
-                  MATRIX: 735->1|869->40|897->43|918->56|956->57|984->59
+                  HASH: 115be5efb8a16452b1a83bb7e7f2a7918b886bea
+                  MATRIX: 741->1|887->52|915->55|936->68|974->69|1002->71
                   LINES: 21->1|26->1|27->2|27->2|27->2|28->3
                   -- GENERATED --
               */

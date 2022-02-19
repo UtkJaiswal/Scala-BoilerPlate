@@ -97,6 +97,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:42
+    def deleteTask: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.deleteTask",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteTask"})
+        }
+      """
+    )
+  
     // @LINE:36
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.logout",

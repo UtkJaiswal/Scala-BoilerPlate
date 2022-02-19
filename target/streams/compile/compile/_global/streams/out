@@ -1,4 +1,7 @@
-[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\controllers\HomeController.scala:24:24: could not find implicit value for parameter flash: play.api.mvc.Flash
-[error]     Ok(views.html.index("Welcome"))
-[error]                        ^
-[error] one error found
+[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\views\tasklist.scala.html:6:33: ')' expected but ',' found.
+[error]             @for((task,i)<-tasks,zipWithIndex) {
+[error]                                 ^
+[error] C:\Users\DELL\OneDrive\Desktop\play-samples-play-scala-starter-example\app\views\tasklist.scala.html:22:2: illegal start of simple expression
+[error] }
+[error]  ^
+[error] two errors found

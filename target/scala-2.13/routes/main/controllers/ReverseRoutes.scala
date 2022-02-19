@@ -67,6 +67,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "about")
     }
   
+    // @LINE:42
+    def deleteTask: Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "deleteTask")
+    }
+  
     // @LINE:36
     def logout: Call = {
       

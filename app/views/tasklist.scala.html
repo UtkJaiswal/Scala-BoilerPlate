@@ -3,8 +3,13 @@
     <div class="container">
         <h2>TaskList</h2>
         <ul>
-            @for(task<-tasks) {
+            @for((task,i)<-tasks.zipWithIndex) {
                 <li>@task</li>
+                <form method="POST" action="@routes.HomeController.deleteTask">
+                    @helper.CSRF.formField
+                    <input type="hidden" value="@i" name="index">
+                    <input type="submit" value="Delete">
+                </form>
             }
         </ul>
         <form method="post" action="@routes.HomeController.addTask">

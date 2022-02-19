@@ -33,5 +33,15 @@ object TaskListInMemoryModel {
         tasks(username) = task :: tasks.get(username).getOrElse(Nil)
     }
 
-    def removeTask(username:String,index:Int):Boolean = ???
+    def removeTask(username:String,index:Int):Boolean = {
+        if(index<0 || tasks.get(username).isEmpty || index>=tasks(username).length)
+        false
+        else {
+            // patch method first arguement tell from which element to remove 
+            // second tells whether something needs to be added and 
+            // third tell how many elements to remove
+            tasks(username) = tasks(username).patch(index,Nil,1)
+            true
+        }
+    }
 }

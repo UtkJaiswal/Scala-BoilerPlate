@@ -58,6 +58,7 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """createUser""", """controllers.HomeController.createUser"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logout""", """controllers.HomeController.logout"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addTask""", """controllers.HomeController.addTask"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteTask""", """controllers.HomeController.deleteTask"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -281,6 +282,24 @@ class Routes(
     )
   )
 
+  // @LINE:42
+  private[this] lazy val controllers_HomeController_deleteTask12_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("deleteTask")))
+  )
+  private[this] lazy val controllers_HomeController_deleteTask12_invoker = createInvoker(
+    HomeController_3.deleteTask,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "deleteTask",
+      Nil,
+      "POST",
+      this.prefix + """deleteTask""",
+      """ delete task""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -354,6 +373,12 @@ class Routes(
     case controllers_HomeController_addTask11_route(params@_) =>
       call { 
         controllers_HomeController_addTask11_invoker.call(HomeController_3.addTask)
+      }
+  
+    // @LINE:42
+    case controllers_HomeController_deleteTask12_route(params@_) =>
+      call { 
+        controllers_HomeController_deleteTask12_invoker.call(HomeController_3.deleteTask)
       }
   }
 }

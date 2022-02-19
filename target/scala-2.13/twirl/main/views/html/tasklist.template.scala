@@ -28,16 +28,21 @@ Seq[Any](format.raw/*1.92*/("""
     """),format.raw/*3.5*/("""<div class="container">
         <h2>TaskList</h2>
         <ul>
-            """),_display_(/*6.14*/for(task<-tasks) yield /*6.30*/ {_display_(Seq[Any](format.raw/*6.32*/("""
+            """),_display_(/*6.14*/for((task,i)<-tasks.zipWithIndex) yield /*6.47*/ {_display_(Seq[Any](format.raw/*6.49*/("""
                 """),format.raw/*7.17*/("""<li>"""),_display_(/*7.22*/task),format.raw/*7.26*/("""</li>
-            """)))}),format.raw/*8.14*/("""
-        """),format.raw/*9.9*/("""</ul>
-        <form method="post" action=""""),_display_(/*10.38*/routes/*10.44*/.HomeController.addTask),format.raw/*10.67*/("""">
-            """),_display_(/*11.14*/helper/*11.20*/.CSRF.formField),format.raw/*11.35*/("""
-            """),format.raw/*12.13*/("""<input  type="text" name="newTask">
+                <form method="POST" action=""""),_display_(/*8.46*/routes/*8.52*/.HomeController.deleteTask),format.raw/*8.78*/("""">
+                    """),_display_(/*9.22*/helper/*9.28*/.CSRF.formField),format.raw/*9.43*/("""
+                    """),format.raw/*10.21*/("""<input type="hidden" value=""""),_display_(/*10.50*/i),format.raw/*10.51*/("""" name="index">
+                    <input type="submit" value="Delete">
+                </form>
+            """)))}),format.raw/*13.14*/("""
+        """),format.raw/*14.9*/("""</ul>
+        <form method="post" action=""""),_display_(/*15.38*/routes/*15.44*/.HomeController.addTask),format.raw/*15.67*/("""">
+            """),_display_(/*16.14*/helper/*16.20*/.CSRF.formField),format.raw/*16.35*/("""
+            """),format.raw/*17.13*/("""<input  type="text" name="newTask">
             <input  type="submit">
         </form>
-        <div><a href=""""),_display_(/*15.24*/routes/*15.30*/.HomeController.logout),format.raw/*15.52*/("""">Logout</a></div>
+        <div><a href=""""),_display_(/*20.24*/routes/*20.30*/.HomeController.logout),format.raw/*20.52*/("""">Logout</a></div>
     </div>
 """)))}))
       }
@@ -56,9 +61,9 @@ Seq[Any](format.raw/*1.92*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/tasklist.scala.html
-                  HASH: 83470a47b653d3ff570b8cc4f0c79ebe89814d9b
-                  MATRIX: 770->1|955->91|983->94|1007->110|1045->111|1077->117|1182->196|1213->212|1252->214|1297->232|1328->237|1352->241|1402->261|1438->271|1509->315|1524->321|1568->344|1612->361|1627->367|1663->382|1705->396|1845->509|1860->515|1903->537
-                  LINES: 21->1|26->1|27->2|27->2|27->2|28->3|31->6|31->6|31->6|32->7|32->7|32->7|33->8|34->9|35->10|35->10|35->10|36->11|36->11|36->11|37->12|40->15|40->15|40->15
+                  HASH: f005eb607793c44e41330516cf55fac551835775
+                  MATRIX: 770->1|955->91|983->94|1007->110|1045->111|1077->117|1182->196|1230->229|1269->231|1314->249|1345->254|1369->258|1447->310|1461->316|1507->342|1558->367|1572->373|1607->388|1657->410|1713->439|1735->440|1879->553|1916->563|1987->607|2002->613|2046->636|2090->653|2105->659|2141->674|2183->688|2323->801|2338->807|2381->829
+                  LINES: 21->1|26->1|27->2|27->2|27->2|28->3|31->6|31->6|31->6|32->7|32->7|32->7|33->8|33->8|33->8|34->9|34->9|34->9|35->10|35->10|35->10|38->13|39->14|40->15|40->15|40->15|41->16|41->16|41->16|42->17|45->20|45->20|45->20
                   -- GENERATED --
               */
           

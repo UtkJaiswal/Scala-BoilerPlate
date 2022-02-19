@@ -97,4 +97,19 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
     }.getOrElse(Redirect(routes.HomeController.login))
   }
 
+
+  //delete task
+  def deleteTask = Action {implicit request =>
+    val usernameOption = request.session.get("username")  
+    usernameOption.map{ username =>
+      
+      val postVals = request.body.asFormUrlEncoded
+      postVals.map{args=>
+        val index = args("index").head.toInt
+        TaskListInMemoryModel.removeTask(username,index)
+        Redirect(routes.HomeController.tasklist)
+      }.getOrElse(Redirect(routes.HomeController.tasklist))
+    }.getOrElse(Redirect(routes.HomeController.login))
+  }
+
 }
